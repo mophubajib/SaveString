@@ -13,15 +13,14 @@ public class Message {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private String text;
-    private String tag;
+
 
     public Message() {
 
     }
 
-    public Message(String text, String tag) {
+    public Message(String text) {
         this.text = text;
-        this.tag = tag;
     }
 
     public Integer getId() {
@@ -40,13 +39,7 @@ public class Message {
         this.text = text;
     }
 
-    public String getTag() {
-        return tag;
-    }
 
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
 
 
 }

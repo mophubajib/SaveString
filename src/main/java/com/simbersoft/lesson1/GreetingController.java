@@ -34,9 +34,9 @@ public class GreetingController {
         return "main";
     }
     @PostMapping
-    public String add(@RequestParam String text, @RequestParam String tag, Map <String,Object> model){
+    public String add(@RequestParam String text, Map <String,Object> model){
 
-        Message message = new Message(text, tag);
+        Message message = new Message(text);
         messageRepos.save(message);
         Iterable<Message> messages = messageRepos.findAll();
         model.put("messages", messages);

@@ -8,5 +8,5 @@ import java.util.List;
 
 
 public interface MessageRepos extends CrudRepository< Message, Integer> {
-    List<Message> findByTag(String tag);
+    List<Message> findByText(String text);
 }
